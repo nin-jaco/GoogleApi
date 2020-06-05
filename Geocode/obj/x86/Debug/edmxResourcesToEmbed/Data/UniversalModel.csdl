@@ -1,0 +1,1785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UniversalModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="UniversalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AccountTypes" EntityType="UniversalModel.AccountType" />
+    <EntitySet Name="BrokerCompanies" EntityType="UniversalModel.BrokerCompany" />
+    <EntitySet Name="Brokers" EntityType="UniversalModel.Broker" />
+    <EntitySet Name="BrokerTypes" EntityType="UniversalModel.BrokerType" />
+    <EntitySet Name="Categories" EntityType="UniversalModel.Category" />
+    <EntitySet Name="CCLAIMS" EntityType="UniversalModel.CCLAIM" />
+    <EntitySet Name="CCLAIMS_OPEN" EntityType="UniversalModel.CCLAIMS_OPEN" />
+    <EntitySet Name="Claims" EntityType="UniversalModel.Claim" />
+    <EntitySet Name="Companies" EntityType="UniversalModel.Company" />
+    <EntitySet Name="CompanyAddresses" EntityType="UniversalModel.CompanyAddress" />
+    <EntitySet Name="CompanyContacts" EntityType="UniversalModel.CompanyContact" />
+    <EntitySet Name="CompanyTypes" EntityType="UniversalModel.CompanyType" />
+    <EntitySet Name="Countries" EntityType="UniversalModel.Country" />
+    <EntitySet Name="DataSources" EntityType="UniversalModel.DataSource" />
+    <EntitySet Name="Dependants" EntityType="UniversalModel.Dependant" />
+    <EntitySet Name="DependantTypes" EntityType="UniversalModel.DependantType" />
+    <EntitySet Name="Disciplines" EntityType="UniversalModel.Discipline" />
+    <EntitySet Name="Genders" EntityType="UniversalModel.Gender" />
+    <EntitySet Name="Hobbies" EntityType="UniversalModel.Hobby" />
+    <EntitySet Name="InstitutionContacts" EntityType="UniversalModel.InstitutionContact" />
+    <EntitySet Name="Institutions" EntityType="UniversalModel.Institution" />
+    <EntitySet Name="LifestylePlans" EntityType="UniversalModel.LifestylePlan" />
+    <EntitySet Name="Limits" EntityType="UniversalModel.Limit" />
+    <EntitySet Name="Logins" EntityType="UniversalModel.Login" />
+    <EntitySet Name="MaritalStatusses" EntityType="UniversalModel.MaritalStatuss" />
+    <EntitySet Name="MemberAddresses" EntityType="UniversalModel.MemberAddress" />
+    <EntitySet Name="Members" EntityType="UniversalModel.Member" />
+    <EntitySet Name="NonMembers" EntityType="UniversalModel.NonMember" />
+    <EntitySet Name="OpenClaims" EntityType="UniversalModel.OpenClaim" />
+    <EntitySet Name="Partners" EntityType="UniversalModel.Partner" />
+    <EntitySet Name="PaymentMethods" EntityType="UniversalModel.PaymentMethod" />
+    <EntitySet Name="PharmacyGroups" EntityType="UniversalModel.PharmacyGroup" />
+    <EntitySet Name="Products" EntityType="UniversalModel.Product" />
+    <EntitySet Name="Provinces" EntityType="UniversalModel.Province" />
+    <EntitySet Name="Purchases" EntityType="UniversalModel.Purchase" />
+    <EntitySet Name="Remarks" EntityType="UniversalModel.Remark" />
+    <EntitySet Name="SchemeOptions" EntityType="UniversalModel.SchemeOption" />
+    <EntitySet Name="Schemes" EntityType="UniversalModel.Scheme" />
+    <EntitySet Name="Sports" EntityType="UniversalModel.Sport" />
+    <EntitySet Name="StatementRequests" EntityType="UniversalModel.StatementRequest" />
+    <EntitySet Name="StatementTypes" EntityType="UniversalModel.StatementType" />
+    <EntitySet Name="Stores" EntityType="UniversalModel.Store" />
+    <EntitySet Name="StudentAddresses" EntityType="UniversalModel.StudentAddress" />
+    <EntitySet Name="StudentDependants" EntityType="UniversalModel.StudentDependant" />
+    <EntitySet Name="Students" EntityType="UniversalModel.Student" />
+    <EntitySet Name="SubConsultants" EntityType="UniversalModel.SubConsultant" />
+    <EntitySet Name="SupplierAddresses" EntityType="UniversalModel.SupplierAddress" />
+    <EntitySet Name="Suppliers" EntityType="UniversalModel.Supplier" />
+    <EntitySet Name="Titles" EntityType="UniversalModel.Title" />
+    <EntitySet Name="TreatmentDetails" EntityType="UniversalModel.TreatmentDetail" />
+    <EntitySet Name="Users" EntityType="UniversalModel.User" />
+    <EntitySet Name="WebsiteLeads" EntityType="UniversalModel.WebsiteLead" />
+    <AssociationSet Name="FK_Students_AccountTypes" Association="UniversalModel.FK_Students_AccountTypes">
+      <End Role="AccountTypes" EntitySet="AccountTypes" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Limits_Categories" Association="UniversalModel.FK_Limits_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Limits" EntitySet="Limits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_Dependants1" Association="UniversalModel.FK_Claims_Dependants1">
+      <End Role="Dependants" EntitySet="Dependants" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_Dependants2" Association="UniversalModel.FK_Claims_Dependants2">
+      <End Role="Dependants" EntitySet="Dependants" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_PaymentMethods" Association="UniversalModel.FK_Claims_PaymentMethods">
+      <End Role="PaymentMethods" EntitySet="PaymentMethods" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_PaymentMethods2" Association="UniversalModel.FK_Claims_PaymentMethods2">
+      <End Role="PaymentMethods" EntitySet="PaymentMethods" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_Remarks" Association="UniversalModel.FK_Claims_Remarks">
+      <End Role="Remarks" EntitySet="Remarks" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_Remarks2" Association="UniversalModel.FK_Claims_Remarks2">
+      <End Role="Remarks" EntitySet="Remarks" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_Suppliers" Association="UniversalModel.FK_Claims_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_Suppliers2" Association="UniversalModel.FK_Claims_Suppliers2">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Companies_CompanyTypes" Association="UniversalModel.FK_Companies_CompanyTypes">
+      <End Role="CompanyTypes" EntitySet="CompanyTypes" />
+      <End Role="Companies" EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Companies_DataSources" Association="UniversalModel.FK_Companies_DataSources">
+      <End Role="DataSources" EntitySet="DataSources" />
+      <End Role="Companies" EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Companies_SchemeOptions" Association="UniversalModel.FK_Companies_SchemeOptions">
+      <End Role="SchemeOptions" EntitySet="SchemeOptions" />
+      <End Role="Companies" EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyAddresses_Companies" Association="UniversalModel.FK_CompanyAddresses_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="CompanyAddresses" EntitySet="CompanyAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyContacts_Companies" Association="UniversalModel.FK_CompanyContacts_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="CompanyContacts" EntitySet="CompanyContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_Companies" Association="UniversalModel.FK_Members_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Companies" Association="UniversalModel.FK_Users_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyAddresses_Provinces" Association="UniversalModel.FK_CompanyAddresses_Provinces">
+      <End Role="Provinces" EntitySet="Provinces" />
+      <End Role="CompanyAddresses" EntitySet="CompanyAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Countries" Association="UniversalModel.FK_Students_Countries">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dependants_DependantTypes" Association="UniversalModel.FK_Dependants_DependantTypes">
+      <End Role="DependantTypes" EntitySet="DependantTypes" />
+      <End Role="Dependants" EntitySet="Dependants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dependants_Genders" Association="UniversalModel.FK_Dependants_Genders">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Dependants" EntitySet="Dependants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dependants_Members" Association="UniversalModel.FK_Dependants_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="Dependants" EntitySet="Dependants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Limits_Dependants" Association="UniversalModel.FK_Limits_Dependants">
+      <End Role="Dependants" EntitySet="Dependants" />
+      <End Role="Limits" EntitySet="Limits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpenClaims_Dependants" Association="UniversalModel.FK_OpenClaims_Dependants">
+      <End Role="Dependants" EntitySet="Dependants" />
+      <End Role="OpenClaims" EntitySet="OpenClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentDependants_DependantTypes" Association="UniversalModel.FK_StudentDependants_DependantTypes">
+      <End Role="DependantTypes" EntitySet="DependantTypes" />
+      <End Role="StudentDependants" EntitySet="StudentDependants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Suppliers_Disciplines" Association="UniversalModel.FK_Suppliers_Disciplines">
+      <End Role="Disciplines" EntitySet="Disciplines" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Suppliers_SubDisciplines" Association="UniversalModel.FK_Suppliers_SubDisciplines">
+      <End Role="Disciplines" EntitySet="Disciplines" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentDependants_Genders" Association="UniversalModel.FK_StudentDependants_Genders">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="StudentDependants" EntitySet="StudentDependants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Genders" Association="UniversalModel.FK_Students_Genders">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Institutions" Association="UniversalModel.FK_Students_Institutions">
+      <End Role="Institutions" EntitySet="Institutions" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_LifestylePlans" Association="UniversalModel.FK_Members_LifestylePlans">
+      <End Role="LifestylePlans" EntitySet="LifestylePlans" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Limits_Members" Association="UniversalModel.FK_Limits_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="Limits" EntitySet="Limits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Logins_Users" Association="UniversalModel.FK_Logins_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Logins" EntitySet="Logins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_MaritalStatusses" Association="UniversalModel.FK_Students_MaritalStatusses">
+      <End Role="MaritalStatusses" EntitySet="MaritalStatusses" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Addresses_Members" Association="UniversalModel.FK_Addresses_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="MemberAddresses" EntitySet="MemberAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Addresses_Provinces" Association="UniversalModel.FK_Addresses_Provinces">
+      <End Role="Provinces" EntitySet="Provinces" />
+      <End Role="MemberAddresses" EntitySet="MemberAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_SchemeOptions" Association="UniversalModel.FK_Members_SchemeOptions">
+      <End Role="SchemeOptions" EntitySet="SchemeOptions" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatementRequests_Members" Association="UniversalModel.FK_StatementRequests_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="StatementRequests" EntitySet="StatementRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpenClaims_PaymentMethods" Association="UniversalModel.FK_OpenClaims_PaymentMethods">
+      <End Role="PaymentMethods" EntitySet="PaymentMethods" />
+      <End Role="OpenClaims" EntitySet="OpenClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpenClaims_Remarks" Association="UniversalModel.FK_OpenClaims_Remarks">
+      <End Role="Remarks" EntitySet="Remarks" />
+      <End Role="OpenClaims" EntitySet="OpenClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpenClaims_Suppliers" Association="UniversalModel.FK_OpenClaims_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="OpenClaims" EntitySet="OpenClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Partners" Association="UniversalModel.FK_Users_Partners">
+      <End Role="Partners" EntitySet="Partners" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentAddresses_Provinces" Association="UniversalModel.FK_StudentAddresses_Provinces">
+      <End Role="Provinces" EntitySet="Provinces" />
+      <End Role="StudentAddresses" EntitySet="StudentAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAddresses_Provinces" Association="UniversalModel.FK_SupplierAddresses_Provinces">
+      <End Role="Provinces" EntitySet="Provinces" />
+      <End Role="SupplierAddresses" EntitySet="SupplierAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SchemeOptions_Schemes" Association="UniversalModel.FK_SchemeOptions_Schemes">
+      <End Role="Schemes" EntitySet="Schemes" />
+      <End Role="SchemeOptions" EntitySet="SchemeOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatementRequests_StatementTypes" Association="UniversalModel.FK_StatementRequests_StatementTypes">
+      <End Role="StatementTypes" EntitySet="StatementTypes" />
+      <End Role="StatementRequests" EntitySet="StatementRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatementRequests_Suppliers" Association="UniversalModel.FK_StatementRequests_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="StatementRequests" EntitySet="StatementRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentAddresses_Students" Association="UniversalModel.FK_StudentAddresses_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentAddresses" EntitySet="StudentAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentDependants_Students" Association="UniversalModel.FK_StudentDependants_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentDependants" EntitySet="StudentDependants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Suppliers" Association="UniversalModel.FK_Students_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Titles" Association="UniversalModel.FK_Students_Titles">
+      <End Role="Titles" EntitySet="Titles" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TreatmentDetail_Students" Association="UniversalModel.FK_TreatmentDetail_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="TreatmentDetail" EntitySet="TreatmentDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAddresses_Suppliers" Association="UniversalModel.FK_SupplierAddresses_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="SupplierAddresses" EntitySet="SupplierAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Members" Association="UniversalModel.FK_Users_Members">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Suppliers" Association="UniversalModel.FK_Users_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AccountType">
+    <Key>
+      <PropertyRef Name="IdAccountType" />
+    </Key>
+    <Property Name="IdAccountType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Students" Relationship="UniversalModel.FK_Students_AccountTypes" FromRole="AccountTypes" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="BrokerCompany">
+    <Key>
+      <PropertyRef Name="IdBrokerCompany" />
+    </Key>
+    <Property Name="IdBrokerCompany" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateAmended" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="Broker">
+    <Key>
+      <PropertyRef Name="IdBroker" />
+    </Key>
+    <Property Name="IdBroker" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrokerCode" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TelephoneNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CellularNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FaxNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AddressLine3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AddressLine4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+    <Property Name="ContactPerson" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactPerson2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContractStartDate" Type="DateTime" />
+    <Property Name="ContractEndDate" Type="DateTime" />
+    <Property Name="IdBrokerType" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Memo2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsAdmin" Type="Boolean" />
+    <Property Name="PayCommission" Type="Boolean" />
+    <Property Name="Consultant" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+    <Property Name="Consultant2" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+    <Property Name="MainBroker" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+    <Property Name="IsHealthAccredited" Type="Boolean" />
+    <Property Name="IsLifeAccredited" Type="Boolean" />
+    <Property Name="IsShortTermAccredited" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="BrokerType">
+    <Key>
+      <PropertyRef Name="IdBrokerType" />
+    </Key>
+    <Property Name="IdBrokerType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrokerTypeIndicator" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="BrokerTypeDescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="IdCategory" />
+    </Key>
+    <Property Name="IdCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryCode" Type="Int32" Nullable="false" />
+    <Property Name="CategoryDescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Limits" Relationship="UniversalModel.FK_Limits_Categories" FromRole="Categories" ToRole="Limits" />
+  </EntityType>
+  <EntityType Name="CCLAIM">
+    <Key>
+      <PropertyRef Name="Column_17" />
+    </Key>
+    <Property Name="Column_0" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Column_1" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+    <Property Name="Column_2" Type="Int64" />
+    <Property Name="Column_3" Type="Int64" />
+    <Property Name="Column_4" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Column_5" Type="DateTime" />
+    <Property Name="FelxGenDate" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Column_6" Type="Int64" />
+    <Property Name="Column_7" Type="Double" />
+    <Property Name="Column_8" Type="Double" />
+    <Property Name="Column_9" Type="Double" />
+    <Property Name="Column_10" Type="Double" />
+    <Property Name="Column_11" Type="Double" />
+    <Property Name="Column_12" Type="Double" />
+    <Property Name="Column_13" Type="Double" />
+    <Property Name="Column_14" Type="Int64" />
+    <Property Name="Column_15" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="Column_16" Type="DateTime" />
+    <Property Name="FlexGenDate2" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Column_17" Type="Int64" Nullable="false" />
+    <Property Name="IdMember" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CCLAIMS_OPEN">
+    <Key>
+      <PropertyRef Name="Column_17" />
+    </Key>
+    <Property Name="Column_0" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Column_1" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+    <Property Name="Column_2" Type="Int64" />
+    <Property Name="Column_3" Type="Int64" />
+    <Property Name="Column_4" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Column_5" Type="DateTime" />
+    <Property Name="FelxGenDate" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Column_6" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Column_7" Type="Double" />
+    <Property Name="Column_8" Type="Double" />
+    <Property Name="Column_9" Type="Double" />
+    <Property Name="Column_10" Type="Double" />
+    <Property Name="Column_11" Type="Double" />
+    <Property Name="Column_12" Type="Double" />
+    <Property Name="Column_13" Type="Double" />
+    <Property Name="Column_14" Type="Int64" />
+    <Property Name="Column_15" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="Column_16" Type="DateTime" />
+    <Property Name="FlexGenDate2" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Column_17" Type="Int64" Nullable="false" />
+    <Property Name="IdMember" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Claim">
+    <Key>
+      <PropertyRef Name="IdClaim" />
+    </Key>
+    <Property Name="IdClaim" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdDependant" Type="Int32" Nullable="false" />
+    <Property Name="IdSupplier" Type="Int32" />
+    <Property Name="Reference" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ServiceDate" Type="DateTime" />
+    <Property Name="Tariff" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ClaimAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TariffAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidToSupplierAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidToMemberAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="RejectedAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="SurchargeAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="ExessAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="IdPaymentMethod" Type="Int32" />
+    <Property Name="IdRemarks" Type="Int32" />
+    <Property Name="DateClaimPaid" Type="DateTime" />
+    <Property Name="ClaimItemLineNumber" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateAmended" Type="DateTime" />
+    <NavigationProperty Name="Dependant" Relationship="UniversalModel.FK_Claims_Dependants1" FromRole="Claims" ToRole="Dependants" />
+    <NavigationProperty Name="Dependant1" Relationship="UniversalModel.FK_Claims_Dependants2" FromRole="Claims" ToRole="Dependants" />
+    <NavigationProperty Name="PaymentMethod" Relationship="UniversalModel.FK_Claims_PaymentMethods" FromRole="Claims" ToRole="PaymentMethods" />
+    <NavigationProperty Name="PaymentMethod1" Relationship="UniversalModel.FK_Claims_PaymentMethods2" FromRole="Claims" ToRole="PaymentMethods" />
+    <NavigationProperty Name="Remark" Relationship="UniversalModel.FK_Claims_Remarks" FromRole="Claims" ToRole="Remarks" />
+    <NavigationProperty Name="Remark1" Relationship="UniversalModel.FK_Claims_Remarks2" FromRole="Claims" ToRole="Remarks" />
+    <NavigationProperty Name="Supplier" Relationship="UniversalModel.FK_Claims_Suppliers" FromRole="Claims" ToRole="Suppliers" />
+    <NavigationProperty Name="Supplier1" Relationship="UniversalModel.FK_Claims_Suppliers2" FromRole="Claims" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+    </Key>
+    <Property Name="IdCompany" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDataSource" Type="Int32" Nullable="false" />
+    <Property Name="CompanyCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdSchemeOption" Type="Int32" Nullable="false" />
+    <Property Name="IdCompanyType" Type="Int32" Nullable="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactPerson" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FaxNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TelephoneNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="URL" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CellularNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="JoiningDate" Type="DateTime" />
+    <Property Name="ResignationDate" Type="DateTime" />
+    <Property Name="IsSuspended" Type="Boolean" />
+    <Property Name="SuspendedStartDate" Type="DateTime" />
+    <Property Name="SuspendedEndDate" Type="DateTime" />
+    <Property Name="IdBroker" Type="Int32" />
+    <Property Name="HoldingCompany" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="IdAreaBroker" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateAmended" Type="DateTime" />
+    <NavigationProperty Name="CompanyType" Relationship="UniversalModel.FK_Companies_CompanyTypes" FromRole="Companies" ToRole="CompanyTypes" />
+    <NavigationProperty Name="DataSource" Relationship="UniversalModel.FK_Companies_DataSources" FromRole="Companies" ToRole="DataSources" />
+    <NavigationProperty Name="SchemeOption" Relationship="UniversalModel.FK_Companies_SchemeOptions" FromRole="Companies" ToRole="SchemeOptions" />
+    <NavigationProperty Name="CompanyAddresses" Relationship="UniversalModel.FK_CompanyAddresses_Companies" FromRole="Companies" ToRole="CompanyAddresses" />
+    <NavigationProperty Name="CompanyContacts" Relationship="UniversalModel.FK_CompanyContacts_Companies" FromRole="Companies" ToRole="CompanyContacts" />
+    <NavigationProperty Name="Members" Relationship="UniversalModel.FK_Members_Companies" FromRole="Companies" ToRole="Members" />
+    <NavigationProperty Name="Users" Relationship="UniversalModel.FK_Users_Companies" FromRole="Companies" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="CompanyAddress">
+    <Key>
+      <PropertyRef Name="IdCompanyAddress" />
+    </Key>
+    <Property Name="IdCompanyAddress" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCompany" Type="Int32" Nullable="false" />
+    <Property Name="Address1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdProvince" Type="Int32" />
+    <Property Name="PostalCode" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Longitude" Type="Double" />
+    <Property Name="IsPostalAddress" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateAmended" Type="DateTime" />
+    <NavigationProperty Name="Company" Relationship="UniversalModel.FK_CompanyAddresses_Companies" FromRole="CompanyAddresses" ToRole="Companies" />
+    <NavigationProperty Name="Province" Relationship="UniversalModel.FK_CompanyAddresses_Provinces" FromRole="CompanyAddresses" ToRole="Provinces" />
+  </EntityType>
+  <EntityType Name="CompanyContact">
+    <Key>
+      <PropertyRef Name="IdCompanyContact" />
+    </Key>
+    <Property Name="IdCompanyContact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCompany" Type="Int32" Nullable="false" />
+    <Property Name="ccSequenceNumber" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TelephoneNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FaxNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Position" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AlternateContactPerson" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AlternateTelephoneNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AlternateFaxNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AlternateEmail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AlternatePosition" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AlternateCompany" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Company" Relationship="UniversalModel.FK_CompanyContacts_Companies" FromRole="CompanyContacts" ToRole="Companies" />
+  </EntityType>
+  <EntityType Name="CompanyType">
+    <Key>
+      <PropertyRef Name="IdCompanyType" />
+    </Key>
+    <Property Name="IdCompanyType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyTypeCode" Type="String" MaxLength="3" Unicode="false" FixedLength="true" />
+    <Property Name="CompanyTypeDescription" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Companies" Relationship="UniversalModel.FK_Companies_CompanyTypes" FromRole="CompanyTypes" ToRole="Companies" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="IdCountry" />
+    </Key>
+    <Property Name="IdCountry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Students" Relationship="UniversalModel.FK_Students_Countries" FromRole="Countries" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="DataSource">
+    <Key>
+      <PropertyRef Name="IdDataSource" />
+    </Key>
+    <Property Name="IdDataSource" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataSourceCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DataSourceDescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Companies" Relationship="UniversalModel.FK_Companies_DataSources" FromRole="DataSources" ToRole="Companies" />
+  </EntityType>
+  <EntityType Name="Dependant">
+    <Key>
+      <PropertyRef Name="IdDependant" />
+    </Key>
+    <Property Name="IdDependant" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdMember" Type="Int32" Nullable="false" />
+    <Property Name="DependantNumber" Type="Int32" Nullable="false" />
+    <Property Name="IdentityNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Initials" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="DependantName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DependantSurname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="JoiningDate" Type="DateTime" />
+    <Property Name="ResignationDate" Type="DateTime" />
+    <Property Name="SuspendedFrom" Type="DateTime" />
+    <Property Name="SuspendedTo" Type="DateTime" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <Property Name="IdGender" Type="Int32" Nullable="false" />
+    <Property Name="WaitingPeriodEndDate" Type="DateTime" />
+    <Property Name="IdDependantType" Type="Int32" Nullable="false" />
+    <Property Name="TelephoneNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CellularNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="WorkNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="FaxNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsDiabetic" Type="Boolean" />
+    <Property Name="DiabeticStartDate" Type="DateTime" />
+    <Property Name="DiabeticEndDate" Type="DateTime" />
+    <Property Name="Weight" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="Height" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="IsSACitizen" Type="Boolean" />
+    <Property Name="IsSmoking" Type="Boolean" />
+    <Property Name="IsStudent" Type="Boolean" />
+    <Property Name="StudentStartDate" Type="DateTime" />
+    <Property Name="StudentEndDate" Type="DateTime" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" />
+    <NavigationProperty Name="Claims" Relationship="UniversalModel.FK_Claims_Dependants1" FromRole="Dependants" ToRole="Claims" />
+    <NavigationProperty Name="Claims1" Relationship="UniversalModel.FK_Claims_Dependants2" FromRole="Dependants" ToRole="Claims" />
+    <NavigationProperty Name="DependantType" Relationship="UniversalModel.FK_Dependants_DependantTypes" FromRole="Dependants" ToRole="DependantTypes" />
+    <NavigationProperty Name="Gender" Relationship="UniversalModel.FK_Dependants_Genders" FromRole="Dependants" ToRole="Genders" />
+    <NavigationProperty Name="Member" Relationship="UniversalModel.FK_Dependants_Members" FromRole="Dependants" ToRole="Members" />
+    <NavigationProperty Name="Limits" Relationship="UniversalModel.FK_Limits_Dependants" FromRole="Dependants" ToRole="Limits" />
+    <NavigationProperty Name="OpenClaims" Relationship="UniversalModel.FK_OpenClaims_Dependants" FromRole="Dependants" ToRole="OpenClaims" />
+  </EntityType>
+  <EntityType Name="DependantType">
+    <Key>
+      <PropertyRef Name="IdDependantType" />
+    </Key>
+    <Property Name="IdDependantType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DependantTypeCode" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+    <Property Name="DependantTypeDescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Dependants" Relationship="UniversalModel.FK_Dependants_DependantTypes" FromRole="DependantTypes" ToRole="Dependants" />
+    <NavigationProperty Name="StudentDependants" Relationship="UniversalModel.FK_StudentDependants_DependantTypes" FromRole="DependantTypes" ToRole="StudentDependants" />
+  </EntityType>
+  <EntityType Name="Discipline">
+    <Key>
+      <PropertyRef Name="IdDiscipline" />
+    </Key>
+    <Property Name="IdDiscipline" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisciplineCode" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+    <Property Name="DisciplineDescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Suppliers" Relationship="UniversalModel.FK_Suppliers_Disciplines" FromRole="Disciplines" ToRole="Suppliers" />
+    <NavigationProperty Name="Suppliers1" Relationship="UniversalModel.FK_Suppliers_SubDisciplines" FromRole="Disciplines" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="IdGender" />
+    </Key>
+    <Property Name="IdGender" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GenderCode" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="GenderDescription" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Dependants" Relationship="UniversalModel.FK_Dependants_Genders" FromRole="Genders" ToRole="Dependants" />
+    <NavigationProperty Name="StudentDependants" Relationship="UniversalModel.FK_StudentDependants_Genders" FromRole="Genders" ToRole="StudentDependants" />
+    <NavigationProperty Name="Students" Relationship="UniversalModel.FK_Students_Genders" FromRole="Genders" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Hobby">
+    <Key>
+      <PropertyRef Name="IdHobby" />
+    </Key>
+    <Property Name="IdHobby" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HobbyName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="InstitutionContact">
+    <Key>
+      <PropertyRef Name="IdInstitutionContact" />
+    </Key>
+    <Property Name="IdInstitutionContact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdInstitution" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Position" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Telephone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Institution">
+    <Key>
+      <PropertyRef Name="IdInstitution" />
+    </Key>
+    <Property Name="IdInstitution" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionName" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Students" Relationship="UniversalModel.FK_Students_Institutions" FromRole="Institutions" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="LifestylePlan">
+    <Key>
+      <PropertyRef Name="IdLifestylePlan" />
+    </Key>
+    <Property Name="IdLifestylePlan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lifesylePlanCode" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="LifestylePlanName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Members" Relationship="UniversalModel.FK_Members_LifestylePlans" FromRole="LifestylePlans" ToRole="Members" />
+  </EntityType>
+  <EntityType Name="Limit">
+    <Key>
+      <PropertyRef Name="IdLimit" />
+    </Key>
+    <Property Name="IdLimit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdMember" Type="Int32" Nullable="false" />
+    <Property Name="IdDependant" Type="Int32" />
+    <Property Name="LimitYear" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="IdCategory" Type="Int32" />
+    <Property Name="LimitDescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LimitCeiling" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="LimitBenefit" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="LimitExgratia" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateUpdated" Type="DateTime" />
+    <NavigationProperty Name="Category" Relationship="UniversalModel.FK_Limits_Categories" FromRole="Limits" ToRole="Categories" />
+    <NavigationProperty Name="Dependant" Relationship="UniversalModel.FK_Limits_Dependants" FromRole="Limits" ToRole="Dependants" />
+    <NavigationProperty Name="Member" Relationship="UniversalModel.FK_Limits_Members" FromRole="Limits" ToRole="Members" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="LoginTime" />
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="LoginTime" Type="DateTime" Nullable="false" />
+    <Property Name="IdUser" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="UniversalModel.FK_Logins_Users" FromRole="Logins" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="MaritalStatuss">
+    <Key>
+      <PropertyRef Name="IdMaritalStatus" />
+    </Key>
+    <Property Name="IdMaritalStatus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Students" Relationship="UniversalModel.FK_Students_MaritalStatusses" FromRole="MaritalStatusses" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="MemberAddress">
+    <Key>
+      <PropertyRef Name="IdAddress" />
+    </Key>
+    <Property Name="IdAddress" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdMember" Type="Int32" />
+    <Property Name="Address1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdProvince" Type="Int32" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Longitude" Type="Double" />
+    <Property Name="IsPostalAddress" Type="Boolean" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateAmended" Type="DateTime" />
+    <NavigationProperty Name="Member" Relationship="UniversalModel.FK_Addresses_Members" FromRole="MemberAddresses" ToRole="Members" />
+    <NavigationProperty Name="Province" Relationship="UniversalModel.FK_Addresses_Provinces" FromRole="MemberAddresses" ToRole="Provinces" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="IdMember" />
+    </Key>
+    <Property Name="IdMember" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAMembershipNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LifestyleMembershipNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="NumberOfDependants" Type="Int32" />
+    <Property Name="IdLifestylePlan" Type="Int32" />
+    <Property Name="IdSchemeOption" Type="Int32" />
+    <Property Name="IdCompany" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" />
+    <NavigationProperty Name="Company" Relationship="UniversalModel.FK_Members_Companies" FromRole="Members" ToRole="Companies" />
+    <NavigationProperty Name="Dependants" Relationship="UniversalModel.FK_Dependants_Members" FromRole="Members" ToRole="Dependants" />
+    <NavigationProperty Name="LifestylePlan" Relationship="UniversalModel.FK_Members_LifestylePlans" FromRole="Members" ToRole="LifestylePlans" />
+    <NavigationProperty Name="Limits" Relationship="UniversalModel.FK_Limits_Members" FromRole="Members" ToRole="Limits" />
+    <NavigationProperty Name="MemberAddresses" Relationship="UniversalModel.FK_Addresses_Members" FromRole="Members" ToRole="MemberAddresses" />
+    <NavigationProperty Name="SchemeOption" Relationship="UniversalModel.FK_Members_SchemeOptions" FromRole="Members" ToRole="SchemeOptions" />
+    <NavigationProperty Name="StatementRequests" Relationship="UniversalModel.FK_StatementRequests_Members" FromRole="Members" ToRole="StatementRequests" />
+  </EntityType>
+  <EntityType Name="NonMember">
+    <Key>
+      <PropertyRef Name="IdNonMember" />
+    </Key>
+    <Property Name="IdNonMember" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Surname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Telephone" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdPassport" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="OpenClaim">
+    <Key>
+      <PropertyRef Name="IdClaim" />
+    </Key>
+    <Property Name="IdClaim" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdDependant" Type="Int32" Nullable="false" />
+    <Property Name="IdSupplier" Type="Int32" />
+    <Property Name="Reference" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ServiceDate" Type="DateTime" />
+    <Property Name="Tariff" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ClaimAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TariffAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidToSupplierAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidToMemberAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="RejectedAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="SurchargeAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="ExessAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="IdPaymentMethod" Type="Int32" />
+    <Property Name="IdRemarks" Type="Int32" />
+    <Property Name="DateClaimPaid" Type="DateTime" />
+    <Property Name="ClaimItemLineNumber" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateAmended" Type="DateTime" />
+    <NavigationProperty Name="Dependant" Relationship="UniversalModel.FK_OpenClaims_Dependants" FromRole="OpenClaims" ToRole="Dependants" />
+    <NavigationProperty Name="PaymentMethod" Relationship="UniversalModel.FK_OpenClaims_PaymentMethods" FromRole="OpenClaims" ToRole="PaymentMethods" />
+    <NavigationProperty Name="Remark" Relationship="UniversalModel.FK_OpenClaims_Remarks" FromRole="OpenClaims" ToRole="Remarks" />
+    <NavigationProperty Name="Supplier" Relationship="UniversalModel.FK_OpenClaims_Suppliers" FromRole="OpenClaims" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Partner">
+    <Key>
+      <PropertyRef Name="IdPartner" />
+    </Key>
+    <Property Name="IdPartner" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PartnerNumber" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PartnerName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Users" Relationship="UniversalModel.FK_Users_Partners" FromRole="Partners" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="PaymentMethod">
+    <Key>
+      <PropertyRef Name="IdPaymentMethod" />
+    </Key>
+    <Property Name="IdPaymentMethod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentMethodCode" Type="Int32" Nullable="false" />
+    <Property Name="PaymentMethodDescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PaymentMadeTo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Claims" Relationship="UniversalModel.FK_Claims_PaymentMethods" FromRole="PaymentMethods" ToRole="Claims" />
+    <NavigationProperty Name="Claims1" Relationship="UniversalModel.FK_Claims_PaymentMethods2" FromRole="PaymentMethods" ToRole="Claims" />
+    <NavigationProperty Name="OpenClaims" Relationship="UniversalModel.FK_OpenClaims_PaymentMethods" FromRole="PaymentMethods" ToRole="OpenClaims" />
+  </EntityType>
+  <EntityType Name="PharmacyGroup">
+    <Key>
+      <PropertyRef Name="IdPharmacyGroup" />
+    </Key>
+    <Property Name="IdPharmacyGroup" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="IdProduct" />
+    </Key>
+    <Property Name="IdProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ProductDescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Province">
+    <Key>
+      <PropertyRef Name="IdProvince" />
+    </Key>
+    <Property Name="IdProvince" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CompanyAddresses" Relationship="UniversalModel.FK_CompanyAddresses_Provinces" FromRole="Provinces" ToRole="CompanyAddresses" />
+    <NavigationProperty Name="MemberAddresses" Relationship="UniversalModel.FK_Addresses_Provinces" FromRole="Provinces" ToRole="MemberAddresses" />
+    <NavigationProperty Name="StudentAddresses" Relationship="UniversalModel.FK_StudentAddresses_Provinces" FromRole="Provinces" ToRole="StudentAddresses" />
+    <NavigationProperty Name="SupplierAddresses" Relationship="UniversalModel.FK_SupplierAddresses_Provinces" FromRole="Provinces" ToRole="SupplierAddresses" />
+  </EntityType>
+  <EntityType Name="Purchase">
+    <Key>
+      <PropertyRef Name="IdPurchase" />
+      <PropertyRef Name="IdStudent" />
+      <PropertyRef Name="IdProduct" />
+      <PropertyRef Name="IdStore" />
+      <PropertyRef Name="TransactionAmount" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="IdPurchase" Type="Int32" Nullable="false" />
+    <Property Name="IdStudent" Type="Int32" Nullable="false" />
+    <Property Name="IdProduct" Type="Int32" Nullable="false" />
+    <Property Name="IdStore" Type="Int32" Nullable="false" />
+    <Property Name="TransactionAmount" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Remark">
+    <Key>
+      <PropertyRef Name="IdRemark" />
+    </Key>
+    <Property Name="IdRemark" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RemarkCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RemarkDescription" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Claims" Relationship="UniversalModel.FK_Claims_Remarks" FromRole="Remarks" ToRole="Claims" />
+    <NavigationProperty Name="Claims1" Relationship="UniversalModel.FK_Claims_Remarks2" FromRole="Remarks" ToRole="Claims" />
+    <NavigationProperty Name="OpenClaims" Relationship="UniversalModel.FK_OpenClaims_Remarks" FromRole="Remarks" ToRole="OpenClaims" />
+  </EntityType>
+  <EntityType Name="SchemeOption">
+    <Key>
+      <PropertyRef Name="IdSchemeOption" />
+    </Key>
+    <Property Name="IdSchemeOption" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdScheme" Type="Int32" Nullable="false" />
+    <Property Name="SchemeOptionCode" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+    <Property Name="SchemeOptionIndicator" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="SchemeOptionDescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Companies" Relationship="UniversalModel.FK_Companies_SchemeOptions" FromRole="SchemeOptions" ToRole="Companies" />
+    <NavigationProperty Name="Members" Relationship="UniversalModel.FK_Members_SchemeOptions" FromRole="SchemeOptions" ToRole="Members" />
+    <NavigationProperty Name="Scheme" Relationship="UniversalModel.FK_SchemeOptions_Schemes" FromRole="SchemeOptions" ToRole="Schemes" />
+  </EntityType>
+  <EntityType Name="Scheme">
+    <Key>
+      <PropertyRef Name="IdScheme" />
+    </Key>
+    <Property Name="IdScheme" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SchemeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SchemeFullName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="SchemeURL" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SchemeTelephone" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="SchemeFax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="SchemeOptions" Relationship="UniversalModel.FK_SchemeOptions_Schemes" FromRole="Schemes" ToRole="SchemeOptions" />
+  </EntityType>
+  <EntityType Name="Sport">
+    <Key>
+      <PropertyRef Name="IdSport" />
+    </Key>
+    <Property Name="IdSport" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SportName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="StatementRequest">
+    <Key>
+      <PropertyRef Name="IdStatementRequested" />
+    </Key>
+    <Property Name="IdStatementRequested" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStatementType" Type="Int32" Nullable="false" />
+    <Property Name="IdMember" Type="Int32" />
+    <Property Name="IdSupplier" Type="Int32" />
+    <Property Name="DateFrom" Type="DateTime" Nullable="false" />
+    <Property Name="DateTo" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Member" Relationship="UniversalModel.FK_StatementRequests_Members" FromRole="StatementRequests" ToRole="Members" />
+    <NavigationProperty Name="StatementType" Relationship="UniversalModel.FK_StatementRequests_StatementTypes" FromRole="StatementRequests" ToRole="StatementTypes" />
+    <NavigationProperty Name="Supplier" Relationship="UniversalModel.FK_StatementRequests_Suppliers" FromRole="StatementRequests" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="StatementType">
+    <Key>
+      <PropertyRef Name="IdStatementType" />
+    </Key>
+    <Property Name="IdStatementType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatementName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="StatementRequests" Relationship="UniversalModel.FK_StatementRequests_StatementTypes" FromRole="StatementTypes" ToRole="StatementRequests" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="IdStore" />
+    </Key>
+    <Property Name="IdStore" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VCSTerminalId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="StudentAddress">
+    <Key>
+      <PropertyRef Name="IdStudentAddress" />
+    </Key>
+    <Property Name="IdStudentAddress" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStudent" Type="Int32" Nullable="false" />
+    <Property Name="Address1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdProvince" Type="Int32" />
+    <Property Name="Country" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="IsPostalAddress" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateAmended" Type="DateTime" />
+    <NavigationProperty Name="Province" Relationship="UniversalModel.FK_StudentAddresses_Provinces" FromRole="StudentAddresses" ToRole="Provinces" />
+    <NavigationProperty Name="Student" Relationship="UniversalModel.FK_StudentAddresses_Students" FromRole="StudentAddresses" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="StudentDependant">
+    <Key>
+      <PropertyRef Name="IdStudentDependant" />
+    </Key>
+    <Property Name="IdStudentDependant" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStudent" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdDependantType" Type="Int32" />
+    <Property Name="IdGender" Type="Int32" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <NavigationProperty Name="DependantType" Relationship="UniversalModel.FK_StudentDependants_DependantTypes" FromRole="StudentDependants" ToRole="DependantTypes" />
+    <NavigationProperty Name="Gender" Relationship="UniversalModel.FK_StudentDependants_Genders" FromRole="StudentDependants" ToRole="Genders" />
+    <NavigationProperty Name="Student" Relationship="UniversalModel.FK_StudentDependants_Students" FromRole="StudentDependants" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="IdStudent" />
+    </Key>
+    <Property Name="IdStudent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CommencementDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="Surname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirstNames" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdTitle" Type="Int32" />
+    <Property Name="IdMaritalStatus" Type="Int32" />
+    <Property Name="Nationality" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <Property Name="IDPassport" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BusinessTelephone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HomeTelephone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Facsimile" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cellular" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="StudyInstitution" Type="Int32" />
+    <Property Name="StudentNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CountryOfIssue" Type="Int32" />
+    <Property Name="Embassy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MedicalQ1" Type="Boolean" />
+    <Property Name="MedicalQ2" Type="Boolean" />
+    <Property Name="MedicalQ3" Type="Boolean" />
+    <Property Name="IdSupplier" Type="Int32" />
+    <Property Name="RegistrationDate" Type="DateTime" />
+    <Property Name="AccountHolderName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BankName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BranchCode" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="13" Unicode="false" FixedLength="true" />
+    <Property Name="IdAccountType" Type="Int32" />
+    <Property Name="MembershipNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="StudyDuration" Type="Double" />
+    <Property Name="Contribution" Type="Double" />
+    <Property Name="ReferenceNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TransactionSuccess" Type="Boolean" />
+    <Property Name="PreferredSupplier" Type="Int32" />
+    <Property Name="IsExistingMember" Type="Boolean" />
+    <Property Name="NewMemberOrder" Type="Int32" />
+    <Property Name="AppointedABSA" Type="Boolean" />
+    <Property Name="BranchName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsGettingIncome" Type="Boolean" />
+    <Property Name="IncomeAmount" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="IdGender" Type="Int32" />
+    <NavigationProperty Name="AccountType" Relationship="UniversalModel.FK_Students_AccountTypes" FromRole="Students" ToRole="AccountTypes" />
+    <NavigationProperty Name="Country" Relationship="UniversalModel.FK_Students_Countries" FromRole="Students" ToRole="Countries" />
+    <NavigationProperty Name="Gender" Relationship="UniversalModel.FK_Students_Genders" FromRole="Students" ToRole="Genders" />
+    <NavigationProperty Name="Institution" Relationship="UniversalModel.FK_Students_Institutions" FromRole="Students" ToRole="Institutions" />
+    <NavigationProperty Name="MaritalStatuss" Relationship="UniversalModel.FK_Students_MaritalStatusses" FromRole="Students" ToRole="MaritalStatusses" />
+    <NavigationProperty Name="StudentAddresses" Relationship="UniversalModel.FK_StudentAddresses_Students" FromRole="Students" ToRole="StudentAddresses" />
+    <NavigationProperty Name="StudentDependants" Relationship="UniversalModel.FK_StudentDependants_Students" FromRole="Students" ToRole="StudentDependants" />
+    <NavigationProperty Name="Supplier" Relationship="UniversalModel.FK_Students_Suppliers" FromRole="Students" ToRole="Suppliers" />
+    <NavigationProperty Name="Title" Relationship="UniversalModel.FK_Students_Titles" FromRole="Students" ToRole="Titles" />
+    <NavigationProperty Name="TreatmentDetails" Relationship="UniversalModel.FK_TreatmentDetail_Students" FromRole="Students" ToRole="TreatmentDetail" />
+  </EntityType>
+  <EntityType Name="SubConsultant">
+    <Key>
+      <PropertyRef Name="IdSubConsultant" />
+    </Key>
+    <Property Name="IdSubConsultant" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="SupplierAddress">
+    <Key>
+      <PropertyRef Name="IdSupplierAddress" />
+    </Key>
+    <Property Name="IdSupplierAddress" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSupplier" Type="Int32" Nullable="false" />
+    <Property Name="Address1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdProvince" Type="Int32" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Longitude" Type="Double" />
+    <Property Name="IsPostalAddress" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateAmended" Type="DateTime" />
+    <NavigationProperty Name="Province" Relationship="UniversalModel.FK_SupplierAddresses_Provinces" FromRole="SupplierAddresses" ToRole="Provinces" />
+    <NavigationProperty Name="Supplier" Relationship="UniversalModel.FK_SupplierAddresses_Suppliers" FromRole="SupplierAddresses" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="IdSupplier" />
+    </Key>
+    <Property Name="IdSupplier" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDiscipline" Type="Int32" />
+    <Property Name="IdSubDiscipline" Type="Int32" />
+    <Property Name="SupplierBHFNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PCNSNumber" Type="String" MaxLength="13" Unicode="false" FixedLength="true" />
+    <Property Name="SupplierTitle" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPostalAddress1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPostalAddress2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPostalAddress3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPostalAddress4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPostalCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierTelephone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsNetworkSupplier" Type="Boolean" />
+    <Property Name="SupplierEmailAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPhysicalAddress1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPhysicalAddress2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPhysicalAddress3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPhysicalAddress4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPhysicalProvince" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierPhysicalPostalCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierFaxNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Longitude" Type="Double" />
+    <Property Name="IdPharmacyGroup" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateUpdated" Type="DateTime" />
+    <NavigationProperty Name="Claims" Relationship="UniversalModel.FK_Claims_Suppliers" FromRole="Suppliers" ToRole="Claims" />
+    <NavigationProperty Name="Claims1" Relationship="UniversalModel.FK_Claims_Suppliers2" FromRole="Suppliers" ToRole="Claims" />
+    <NavigationProperty Name="Discipline" Relationship="UniversalModel.FK_Suppliers_Disciplines" FromRole="Suppliers" ToRole="Disciplines" />
+    <NavigationProperty Name="Discipline1" Relationship="UniversalModel.FK_Suppliers_SubDisciplines" FromRole="Suppliers" ToRole="Disciplines" />
+    <NavigationProperty Name="OpenClaims" Relationship="UniversalModel.FK_OpenClaims_Suppliers" FromRole="Suppliers" ToRole="OpenClaims" />
+    <NavigationProperty Name="StatementRequests" Relationship="UniversalModel.FK_StatementRequests_Suppliers" FromRole="Suppliers" ToRole="StatementRequests" />
+    <NavigationProperty Name="Students" Relationship="UniversalModel.FK_Students_Suppliers" FromRole="Suppliers" ToRole="Students" />
+    <NavigationProperty Name="SupplierAddresses" Relationship="UniversalModel.FK_SupplierAddresses_Suppliers" FromRole="Suppliers" ToRole="SupplierAddresses" />
+    <NavigationProperty Name="Users" Relationship="UniversalModel.FK_Users_Members" FromRole="Suppliers" ToRole="Users" />
+    <NavigationProperty Name="Users1" Relationship="UniversalModel.FK_Users_Suppliers" FromRole="Suppliers" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Title">
+    <Key>
+      <PropertyRef Name="IdTitle" />
+    </Key>
+    <Property Name="IdTitle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TitleAbbreviation" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="TitleDescription" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Students" Relationship="UniversalModel.FK_Students_Titles" FromRole="Titles" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="TreatmentDetail">
+    <Key>
+      <PropertyRef Name="IdTreatmentDetail" />
+    </Key>
+    <Property Name="IdTreatmentDetail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStudent" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DetailsOfCondition" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TreatmentDate" Type="DateTime" />
+    <Property Name="DegreeOfRecovery" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Student" Relationship="UniversalModel.FK_TreatmentDetail_Students" FromRole="TreatmentDetail" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserLevel" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="RegistrationDate" Type="DateTime" Nullable="false" />
+    <Property Name="IdMember" Type="Int32" />
+    <Property Name="IdSupplier" Type="Int32" />
+    <Property Name="IdPartner" Type="Int32" />
+    <Property Name="IdBroker" Type="Int32" />
+    <Property Name="IdCompany" Type="Int32" />
+    <Property Name="IdStudent" Type="Int32" />
+    <Property Name="IsAdmin" Type="Boolean" />
+    <Property Name="UserEmail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsSupplier" Type="Boolean" />
+    <Property Name="IsNHBRCFLI" Type="Boolean" />
+    <Property Name="IsLifestyle" Type="Boolean" />
+    <Property Name="IsCompCare" Type="Boolean" />
+    <Property Name="IsTiger" Type="Boolean" />
+    <Property Name="IsGrintek" Type="Boolean" />
+    <Property Name="IsWorkerPlan" Type="Boolean" />
+    <Property Name="IsBCIMA" Type="Boolean" />
+    <Property Name="IsPartner" Type="Boolean" />
+    <Property Name="IsBroker" Type="Boolean" />
+    <Property Name="IsCompany" Type="Boolean" />
+    <Property Name="IsStudent" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateUpdated" Type="DateTime" />
+    <NavigationProperty Name="Company" Relationship="UniversalModel.FK_Users_Companies" FromRole="Users" ToRole="Companies" />
+    <NavigationProperty Name="Logins" Relationship="UniversalModel.FK_Logins_Users" FromRole="Users" ToRole="Logins" />
+    <NavigationProperty Name="Partner" Relationship="UniversalModel.FK_Users_Partners" FromRole="Users" ToRole="Partners" />
+    <NavigationProperty Name="Supplier" Relationship="UniversalModel.FK_Users_Members" FromRole="Users" ToRole="Suppliers" />
+    <NavigationProperty Name="Supplier1" Relationship="UniversalModel.FK_Users_Suppliers" FromRole="Users" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="WebsiteLead">
+    <Key>
+      <PropertyRef Name="CreatedOn" />
+    </Key>
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdSchemeOption" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_Students_AccountTypes">
+    <End Role="AccountTypes" Type="UniversalModel.AccountType" Multiplicity="0..1" />
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountTypes">
+        <PropertyRef Name="IdAccountType" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="IdAccountType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Limits_Categories">
+    <End Role="Categories" Type="UniversalModel.Category" Multiplicity="0..1" />
+    <End Role="Limits" Type="UniversalModel.Limit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="IdCategory" />
+      </Principal>
+      <Dependent Role="Limits">
+        <PropertyRef Name="IdCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_Dependants1">
+    <End Role="Dependants" Type="UniversalModel.Dependant" Multiplicity="1" />
+    <End Role="Claims" Type="UniversalModel.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dependants">
+        <PropertyRef Name="IdDependant" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="IdDependant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_Dependants2">
+    <End Role="Dependants" Type="UniversalModel.Dependant" Multiplicity="1" />
+    <End Role="Claims" Type="UniversalModel.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dependants">
+        <PropertyRef Name="IdDependant" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="IdDependant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_PaymentMethods">
+    <End Role="PaymentMethods" Type="UniversalModel.PaymentMethod" Multiplicity="0..1" />
+    <End Role="Claims" Type="UniversalModel.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMethods">
+        <PropertyRef Name="IdPaymentMethod" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="IdPaymentMethod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_PaymentMethods2">
+    <End Role="PaymentMethods" Type="UniversalModel.PaymentMethod" Multiplicity="0..1" />
+    <End Role="Claims" Type="UniversalModel.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMethods">
+        <PropertyRef Name="IdPaymentMethod" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="IdPaymentMethod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_Remarks">
+    <End Role="Remarks" Type="UniversalModel.Remark" Multiplicity="0..1" />
+    <End Role="Claims" Type="UniversalModel.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Remarks">
+        <PropertyRef Name="IdRemark" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="IdRemarks" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_Remarks2">
+    <End Role="Remarks" Type="UniversalModel.Remark" Multiplicity="0..1" />
+    <End Role="Claims" Type="UniversalModel.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Remarks">
+        <PropertyRef Name="IdRemark" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="IdRemarks" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_Suppliers">
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="0..1" />
+    <End Role="Claims" Type="UniversalModel.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="IdSupplier" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="IdSupplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_Suppliers2">
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="0..1" />
+    <End Role="Claims" Type="UniversalModel.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="IdSupplier" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="IdSupplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Companies_CompanyTypes">
+    <End Role="CompanyTypes" Type="UniversalModel.CompanyType" Multiplicity="1" />
+    <End Role="Companies" Type="UniversalModel.Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyTypes">
+        <PropertyRef Name="IdCompanyType" />
+      </Principal>
+      <Dependent Role="Companies">
+        <PropertyRef Name="IdCompanyType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Companies_DataSources">
+    <End Role="DataSources" Type="UniversalModel.DataSource" Multiplicity="1" />
+    <End Role="Companies" Type="UniversalModel.Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataSources">
+        <PropertyRef Name="IdDataSource" />
+      </Principal>
+      <Dependent Role="Companies">
+        <PropertyRef Name="IdDataSource" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Companies_SchemeOptions">
+    <End Role="SchemeOptions" Type="UniversalModel.SchemeOption" Multiplicity="1" />
+    <End Role="Companies" Type="UniversalModel.Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchemeOptions">
+        <PropertyRef Name="IdSchemeOption" />
+      </Principal>
+      <Dependent Role="Companies">
+        <PropertyRef Name="IdSchemeOption" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyAddresses_Companies">
+    <End Role="Companies" Type="UniversalModel.Company" Multiplicity="1" />
+    <End Role="CompanyAddresses" Type="UniversalModel.CompanyAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="IdCompany" />
+      </Principal>
+      <Dependent Role="CompanyAddresses">
+        <PropertyRef Name="IdCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyContacts_Companies">
+    <End Role="Companies" Type="UniversalModel.Company" Multiplicity="1" />
+    <End Role="CompanyContacts" Type="UniversalModel.CompanyContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="IdCompany" />
+      </Principal>
+      <Dependent Role="CompanyContacts">
+        <PropertyRef Name="IdCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_Companies">
+    <End Role="Companies" Type="UniversalModel.Company" Multiplicity="0..1" />
+    <End Role="Members" Type="UniversalModel.Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="IdCompany" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="IdCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Companies">
+    <End Role="Companies" Type="UniversalModel.Company" Multiplicity="0..1" />
+    <End Role="Users" Type="UniversalModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="IdCompany" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyAddresses_Provinces">
+    <End Role="Provinces" Type="UniversalModel.Province" Multiplicity="0..1" />
+    <End Role="CompanyAddresses" Type="UniversalModel.CompanyAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provinces">
+        <PropertyRef Name="IdProvince" />
+      </Principal>
+      <Dependent Role="CompanyAddresses">
+        <PropertyRef Name="IdProvince" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Countries">
+    <End Role="Countries" Type="UniversalModel.Country" Multiplicity="0..1" />
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="IdCountry" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="CountryOfIssue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dependants_DependantTypes">
+    <End Role="DependantTypes" Type="UniversalModel.DependantType" Multiplicity="1" />
+    <End Role="Dependants" Type="UniversalModel.Dependant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DependantTypes">
+        <PropertyRef Name="IdDependantType" />
+      </Principal>
+      <Dependent Role="Dependants">
+        <PropertyRef Name="IdDependantType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dependants_Genders">
+    <End Role="Genders" Type="UniversalModel.Gender" Multiplicity="1" />
+    <End Role="Dependants" Type="UniversalModel.Dependant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="IdGender" />
+      </Principal>
+      <Dependent Role="Dependants">
+        <PropertyRef Name="IdGender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dependants_Members">
+    <End Role="Members" Type="UniversalModel.Member" Multiplicity="1" />
+    <End Role="Dependants" Type="UniversalModel.Dependant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="IdMember" />
+      </Principal>
+      <Dependent Role="Dependants">
+        <PropertyRef Name="IdMember" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Limits_Dependants">
+    <End Role="Dependants" Type="UniversalModel.Dependant" Multiplicity="0..1" />
+    <End Role="Limits" Type="UniversalModel.Limit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dependants">
+        <PropertyRef Name="IdDependant" />
+      </Principal>
+      <Dependent Role="Limits">
+        <PropertyRef Name="IdDependant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpenClaims_Dependants">
+    <End Role="Dependants" Type="UniversalModel.Dependant" Multiplicity="1" />
+    <End Role="OpenClaims" Type="UniversalModel.OpenClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dependants">
+        <PropertyRef Name="IdDependant" />
+      </Principal>
+      <Dependent Role="OpenClaims">
+        <PropertyRef Name="IdDependant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentDependants_DependantTypes">
+    <End Role="DependantTypes" Type="UniversalModel.DependantType" Multiplicity="0..1" />
+    <End Role="StudentDependants" Type="UniversalModel.StudentDependant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DependantTypes">
+        <PropertyRef Name="IdDependantType" />
+      </Principal>
+      <Dependent Role="StudentDependants">
+        <PropertyRef Name="IdDependantType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Suppliers_Disciplines">
+    <End Role="Disciplines" Type="UniversalModel.Discipline" Multiplicity="0..1" />
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disciplines">
+        <PropertyRef Name="IdDiscipline" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="IdDiscipline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Suppliers_SubDisciplines">
+    <End Role="Disciplines" Type="UniversalModel.Discipline" Multiplicity="0..1" />
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disciplines">
+        <PropertyRef Name="IdDiscipline" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="IdSubDiscipline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentDependants_Genders">
+    <End Role="Genders" Type="UniversalModel.Gender" Multiplicity="0..1" />
+    <End Role="StudentDependants" Type="UniversalModel.StudentDependant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="IdGender" />
+      </Principal>
+      <Dependent Role="StudentDependants">
+        <PropertyRef Name="IdGender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Genders">
+    <End Role="Genders" Type="UniversalModel.Gender" Multiplicity="0..1" />
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="IdGender" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="IdGender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Institutions">
+    <End Role="Institutions" Type="UniversalModel.Institution" Multiplicity="0..1" />
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institutions">
+        <PropertyRef Name="IdInstitution" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="StudyInstitution" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_LifestylePlans">
+    <End Role="LifestylePlans" Type="UniversalModel.LifestylePlan" Multiplicity="0..1" />
+    <End Role="Members" Type="UniversalModel.Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LifestylePlans">
+        <PropertyRef Name="IdLifestylePlan" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="IdLifestylePlan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Limits_Members">
+    <End Role="Members" Type="UniversalModel.Member" Multiplicity="1" />
+    <End Role="Limits" Type="UniversalModel.Limit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="IdMember" />
+      </Principal>
+      <Dependent Role="Limits">
+        <PropertyRef Name="IdMember" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Logins_Users">
+    <End Role="Users" Type="UniversalModel.User" Multiplicity="1" />
+    <End Role="Logins" Type="UniversalModel.Login" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Logins">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_MaritalStatusses">
+    <End Role="MaritalStatusses" Type="UniversalModel.MaritalStatuss" Multiplicity="0..1" />
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaritalStatusses">
+        <PropertyRef Name="IdMaritalStatus" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="IdMaritalStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Addresses_Members">
+    <End Role="Members" Type="UniversalModel.Member" Multiplicity="0..1" />
+    <End Role="MemberAddresses" Type="UniversalModel.MemberAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="IdMember" />
+      </Principal>
+      <Dependent Role="MemberAddresses">
+        <PropertyRef Name="IdMember" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Addresses_Provinces">
+    <End Role="Provinces" Type="UniversalModel.Province" Multiplicity="0..1" />
+    <End Role="MemberAddresses" Type="UniversalModel.MemberAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provinces">
+        <PropertyRef Name="IdProvince" />
+      </Principal>
+      <Dependent Role="MemberAddresses">
+        <PropertyRef Name="IdProvince" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_SchemeOptions">
+    <End Role="SchemeOptions" Type="UniversalModel.SchemeOption" Multiplicity="0..1" />
+    <End Role="Members" Type="UniversalModel.Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchemeOptions">
+        <PropertyRef Name="IdSchemeOption" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="IdSchemeOption" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatementRequests_Members">
+    <End Role="Members" Type="UniversalModel.Member" Multiplicity="0..1" />
+    <End Role="StatementRequests" Type="UniversalModel.StatementRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="IdMember" />
+      </Principal>
+      <Dependent Role="StatementRequests">
+        <PropertyRef Name="IdMember" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpenClaims_PaymentMethods">
+    <End Role="PaymentMethods" Type="UniversalModel.PaymentMethod" Multiplicity="0..1" />
+    <End Role="OpenClaims" Type="UniversalModel.OpenClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMethods">
+        <PropertyRef Name="IdPaymentMethod" />
+      </Principal>
+      <Dependent Role="OpenClaims">
+        <PropertyRef Name="IdPaymentMethod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpenClaims_Remarks">
+    <End Role="Remarks" Type="UniversalModel.Remark" Multiplicity="0..1" />
+    <End Role="OpenClaims" Type="UniversalModel.OpenClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Remarks">
+        <PropertyRef Name="IdRemark" />
+      </Principal>
+      <Dependent Role="OpenClaims">
+        <PropertyRef Name="IdRemarks" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpenClaims_Suppliers">
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="0..1" />
+    <End Role="OpenClaims" Type="UniversalModel.OpenClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="IdSupplier" />
+      </Principal>
+      <Dependent Role="OpenClaims">
+        <PropertyRef Name="IdSupplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Partners">
+    <End Role="Partners" Type="UniversalModel.Partner" Multiplicity="0..1" />
+    <End Role="Users" Type="UniversalModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Partners">
+        <PropertyRef Name="IdPartner" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentAddresses_Provinces">
+    <End Role="Provinces" Type="UniversalModel.Province" Multiplicity="0..1" />
+    <End Role="StudentAddresses" Type="UniversalModel.StudentAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provinces">
+        <PropertyRef Name="IdProvince" />
+      </Principal>
+      <Dependent Role="StudentAddresses">
+        <PropertyRef Name="IdProvince" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAddresses_Provinces">
+    <End Role="Provinces" Type="UniversalModel.Province" Multiplicity="0..1" />
+    <End Role="SupplierAddresses" Type="UniversalModel.SupplierAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provinces">
+        <PropertyRef Name="IdProvince" />
+      </Principal>
+      <Dependent Role="SupplierAddresses">
+        <PropertyRef Name="IdProvince" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SchemeOptions_Schemes">
+    <End Role="Schemes" Type="UniversalModel.Scheme" Multiplicity="1" />
+    <End Role="SchemeOptions" Type="UniversalModel.SchemeOption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schemes">
+        <PropertyRef Name="IdScheme" />
+      </Principal>
+      <Dependent Role="SchemeOptions">
+        <PropertyRef Name="IdScheme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatementRequests_StatementTypes">
+    <End Role="StatementTypes" Type="UniversalModel.StatementType" Multiplicity="1" />
+    <End Role="StatementRequests" Type="UniversalModel.StatementRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatementTypes">
+        <PropertyRef Name="IdStatementType" />
+      </Principal>
+      <Dependent Role="StatementRequests">
+        <PropertyRef Name="IdStatementType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatementRequests_Suppliers">
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="0..1" />
+    <End Role="StatementRequests" Type="UniversalModel.StatementRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="IdSupplier" />
+      </Principal>
+      <Dependent Role="StatementRequests">
+        <PropertyRef Name="IdSupplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentAddresses_Students">
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="1" />
+    <End Role="StudentAddresses" Type="UniversalModel.StudentAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="IdStudent" />
+      </Principal>
+      <Dependent Role="StudentAddresses">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentDependants_Students">
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="1" />
+    <End Role="StudentDependants" Type="UniversalModel.StudentDependant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="IdStudent" />
+      </Principal>
+      <Dependent Role="StudentDependants">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Suppliers">
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="0..1" />
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="IdSupplier" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="PreferredSupplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Titles">
+    <End Role="Titles" Type="UniversalModel.Title" Multiplicity="0..1" />
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Titles">
+        <PropertyRef Name="IdTitle" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="IdTitle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TreatmentDetail_Students">
+    <End Role="Students" Type="UniversalModel.Student" Multiplicity="1" />
+    <End Role="TreatmentDetail" Type="UniversalModel.TreatmentDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="IdStudent" />
+      </Principal>
+      <Dependent Role="TreatmentDetail">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAddresses_Suppliers">
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="1" />
+    <End Role="SupplierAddresses" Type="UniversalModel.SupplierAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="IdSupplier" />
+      </Principal>
+      <Dependent Role="SupplierAddresses">
+        <PropertyRef Name="IdSupplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Members">
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="0..1" />
+    <End Role="Users" Type="UniversalModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="IdSupplier" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdSupplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Suppliers">
+    <End Role="Suppliers" Type="UniversalModel.Supplier" Multiplicity="0..1" />
+    <End Role="Users" Type="UniversalModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="IdSupplier" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdSupplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

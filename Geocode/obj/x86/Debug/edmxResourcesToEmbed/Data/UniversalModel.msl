@@ -1,0 +1,789 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UniversalModelStoreContainer" CdmEntityContainer="UniversalEntities">
+    <EntitySetMapping Name="AccountTypes">
+      <EntityTypeMapping TypeName="UniversalModel.AccountType">
+        <MappingFragment StoreEntitySet="AccountTypes">
+          <ScalarProperty Name="IdAccountType" ColumnName="IdAccountType" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BrokerCompanies">
+      <EntityTypeMapping TypeName="UniversalModel.BrokerCompany">
+        <MappingFragment StoreEntitySet="BrokerCompanies">
+          <ScalarProperty Name="IdBrokerCompany" ColumnName="IdBrokerCompany" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateAmended" ColumnName="DateAmended" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brokers">
+      <EntityTypeMapping TypeName="UniversalModel.Broker">
+        <MappingFragment StoreEntitySet="Brokers">
+          <ScalarProperty Name="IdBroker" ColumnName="IdBroker" />
+          <ScalarProperty Name="BrokerCode" ColumnName="BrokerCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+          <ScalarProperty Name="CellularNumber" ColumnName="CellularNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="AddressLine3" ColumnName="AddressLine3" />
+          <ScalarProperty Name="AddressLine4" ColumnName="AddressLine4" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="ContactPerson2" ColumnName="ContactPerson2" />
+          <ScalarProperty Name="ContractStartDate" ColumnName="ContractStartDate" />
+          <ScalarProperty Name="ContractEndDate" ColumnName="ContractEndDate" />
+          <ScalarProperty Name="IdBrokerType" ColumnName="IdBrokerType" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Memo2" ColumnName="Memo2" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="PayCommission" ColumnName="PayCommission" />
+          <ScalarProperty Name="Consultant" ColumnName="Consultant" />
+          <ScalarProperty Name="Consultant2" ColumnName="Consultant2" />
+          <ScalarProperty Name="MainBroker" ColumnName="MainBroker" />
+          <ScalarProperty Name="IsHealthAccredited" ColumnName="IsHealthAccredited" />
+          <ScalarProperty Name="IsLifeAccredited" ColumnName="IsLifeAccredited" />
+          <ScalarProperty Name="IsShortTermAccredited" ColumnName="IsShortTermAccredited" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BrokerTypes">
+      <EntityTypeMapping TypeName="UniversalModel.BrokerType">
+        <MappingFragment StoreEntitySet="BrokerTypes">
+          <ScalarProperty Name="IdBrokerType" ColumnName="IdBrokerType" />
+          <ScalarProperty Name="BrokerTypeIndicator" ColumnName="BrokerTypeIndicator" />
+          <ScalarProperty Name="BrokerTypeDescription" ColumnName="BrokerTypeDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="UniversalModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
+          <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+          <ScalarProperty Name="CategoryDescription" ColumnName="CategoryDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CCLAIMS">
+      <EntityTypeMapping TypeName="UniversalModel.CCLAIM">
+        <MappingFragment StoreEntitySet="CCLAIMS">
+          <ScalarProperty Name="Column_0" ColumnName="Column 0" />
+          <ScalarProperty Name="Column_1" ColumnName="Column 1" />
+          <ScalarProperty Name="Column_2" ColumnName="Column 2" />
+          <ScalarProperty Name="Column_3" ColumnName="Column 3" />
+          <ScalarProperty Name="Column_4" ColumnName="Column 4" />
+          <ScalarProperty Name="Column_5" ColumnName="Column 5" />
+          <ScalarProperty Name="FelxGenDate" ColumnName="FelxGenDate" />
+          <ScalarProperty Name="Column_6" ColumnName="Column 6" />
+          <ScalarProperty Name="Column_7" ColumnName="Column 7" />
+          <ScalarProperty Name="Column_8" ColumnName="Column 8" />
+          <ScalarProperty Name="Column_9" ColumnName="Column 9" />
+          <ScalarProperty Name="Column_10" ColumnName="Column 10" />
+          <ScalarProperty Name="Column_11" ColumnName="Column 11" />
+          <ScalarProperty Name="Column_12" ColumnName="Column 12" />
+          <ScalarProperty Name="Column_13" ColumnName="Column 13" />
+          <ScalarProperty Name="Column_14" ColumnName="Column 14" />
+          <ScalarProperty Name="Column_15" ColumnName="Column 15" />
+          <ScalarProperty Name="Column_16" ColumnName="Column 16" />
+          <ScalarProperty Name="FlexGenDate2" ColumnName="FlexGenDate2" />
+          <ScalarProperty Name="Column_17" ColumnName="Column 17" />
+          <ScalarProperty Name="IdMember" ColumnName="IdMember" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CCLAIMS_OPEN">
+      <EntityTypeMapping TypeName="UniversalModel.CCLAIMS_OPEN">
+        <MappingFragment StoreEntitySet="CCLAIMS_OPEN">
+          <ScalarProperty Name="Column_0" ColumnName="Column 0" />
+          <ScalarProperty Name="Column_1" ColumnName="Column 1" />
+          <ScalarProperty Name="Column_2" ColumnName="Column 2" />
+          <ScalarProperty Name="Column_3" ColumnName="Column 3" />
+          <ScalarProperty Name="Column_4" ColumnName="Column 4" />
+          <ScalarProperty Name="Column_5" ColumnName="Column 5" />
+          <ScalarProperty Name="FelxGenDate" ColumnName="FelxGenDate" />
+          <ScalarProperty Name="Column_6" ColumnName="Column 6" />
+          <ScalarProperty Name="Column_7" ColumnName="Column 7" />
+          <ScalarProperty Name="Column_8" ColumnName="Column 8" />
+          <ScalarProperty Name="Column_9" ColumnName="Column 9" />
+          <ScalarProperty Name="Column_10" ColumnName="Column 10" />
+          <ScalarProperty Name="Column_11" ColumnName="Column 11" />
+          <ScalarProperty Name="Column_12" ColumnName="Column 12" />
+          <ScalarProperty Name="Column_13" ColumnName="Column 13" />
+          <ScalarProperty Name="Column_14" ColumnName="Column 14" />
+          <ScalarProperty Name="Column_15" ColumnName="Column 15" />
+          <ScalarProperty Name="Column_16" ColumnName="Column 16" />
+          <ScalarProperty Name="FlexGenDate2" ColumnName="FlexGenDate2" />
+          <ScalarProperty Name="Column_17" ColumnName="Column 17" />
+          <ScalarProperty Name="IdMember" ColumnName="IdMember" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Claims">
+      <EntityTypeMapping TypeName="UniversalModel.Claim">
+        <MappingFragment StoreEntitySet="Claims">
+          <ScalarProperty Name="IdClaim" ColumnName="IdClaim" />
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+          <ScalarProperty Name="IdDependant" ColumnName="IdDependant" />
+          <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="ServiceDate" ColumnName="ServiceDate" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="ClaimAmount" ColumnName="ClaimAmount" />
+          <ScalarProperty Name="TariffAmount" ColumnName="TariffAmount" />
+          <ScalarProperty Name="PaidToSupplierAmount" ColumnName="PaidToSupplierAmount" />
+          <ScalarProperty Name="PaidToMemberAmount" ColumnName="PaidToMemberAmount" />
+          <ScalarProperty Name="RejectedAmount" ColumnName="RejectedAmount" />
+          <ScalarProperty Name="SurchargeAmount" ColumnName="SurchargeAmount" />
+          <ScalarProperty Name="ExessAmount" ColumnName="ExessAmount" />
+          <ScalarProperty Name="IdPaymentMethod" ColumnName="IdPaymentMethod" />
+          <ScalarProperty Name="IdRemarks" ColumnName="IdRemarks" />
+          <ScalarProperty Name="DateClaimPaid" ColumnName="DateClaimPaid" />
+          <ScalarProperty Name="ClaimItemLineNumber" ColumnName="ClaimItemLineNumber" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateAmended" ColumnName="DateAmended" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="UniversalModel.Company">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="IdDataSource" ColumnName="IdDataSource" />
+          <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+          <ScalarProperty Name="IdSchemeOption" ColumnName="IdSchemeOption" />
+          <ScalarProperty Name="IdCompanyType" ColumnName="IdCompanyType" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="CellularNumber" ColumnName="CellularNumber" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="ResignationDate" ColumnName="ResignationDate" />
+          <ScalarProperty Name="IsSuspended" ColumnName="IsSuspended" />
+          <ScalarProperty Name="SuspendedStartDate" ColumnName="SuspendedStartDate" />
+          <ScalarProperty Name="SuspendedEndDate" ColumnName="SuspendedEndDate" />
+          <ScalarProperty Name="IdBroker" ColumnName="IdBroker" />
+          <ScalarProperty Name="HoldingCompany" ColumnName="HoldingCompany" />
+          <ScalarProperty Name="IdAreaBroker" ColumnName="IdAreaBroker" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateAmended" ColumnName="DateAmended" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyAddresses">
+      <EntityTypeMapping TypeName="UniversalModel.CompanyAddress">
+        <MappingFragment StoreEntitySet="CompanyAddresses">
+          <ScalarProperty Name="IdCompanyAddress" ColumnName="IdCompanyAddress" />
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address4" ColumnName="Address4" />
+          <ScalarProperty Name="IdProvince" ColumnName="IdProvince" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="IsPostalAddress" ColumnName="IsPostalAddress" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateAmended" ColumnName="DateAmended" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyContacts">
+      <EntityTypeMapping TypeName="UniversalModel.CompanyContact">
+        <MappingFragment StoreEntitySet="CompanyContacts">
+          <ScalarProperty Name="IdCompanyContact" ColumnName="IdCompanyContact" />
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="ccSequenceNumber" ColumnName="ccSequenceNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="AlternateContactPerson" ColumnName="AlternateContactPerson" />
+          <ScalarProperty Name="AlternateTelephoneNumber" ColumnName="AlternateTelephoneNumber" />
+          <ScalarProperty Name="AlternateFaxNumber" ColumnName="AlternateFaxNumber" />
+          <ScalarProperty Name="AlternateEmail" ColumnName="AlternateEmail" />
+          <ScalarProperty Name="AlternatePosition" ColumnName="AlternatePosition" />
+          <ScalarProperty Name="AlternateCompany" ColumnName="AlternateCompany" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyTypes">
+      <EntityTypeMapping TypeName="UniversalModel.CompanyType">
+        <MappingFragment StoreEntitySet="CompanyTypes">
+          <ScalarProperty Name="IdCompanyType" ColumnName="IdCompanyType" />
+          <ScalarProperty Name="CompanyTypeCode" ColumnName="CompanyTypeCode" />
+          <ScalarProperty Name="CompanyTypeDescription" ColumnName="CompanyTypeDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="UniversalModel.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="IdCountry" ColumnName="IdCountry" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataSources">
+      <EntityTypeMapping TypeName="UniversalModel.DataSource">
+        <MappingFragment StoreEntitySet="DataSources">
+          <ScalarProperty Name="IdDataSource" ColumnName="IdDataSource" />
+          <ScalarProperty Name="DataSourceCode" ColumnName="DataSourceCode" />
+          <ScalarProperty Name="DataSourceDescription" ColumnName="DataSourceDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dependants">
+      <EntityTypeMapping TypeName="UniversalModel.Dependant">
+        <MappingFragment StoreEntitySet="Dependants">
+          <ScalarProperty Name="IdDependant" ColumnName="IdDependant" />
+          <ScalarProperty Name="IdMember" ColumnName="IdMember" />
+          <ScalarProperty Name="DependantNumber" ColumnName="DependantNumber" />
+          <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+          <ScalarProperty Name="Initials" ColumnName="Initials" />
+          <ScalarProperty Name="DependantName" ColumnName="DependantName" />
+          <ScalarProperty Name="DependantSurname" ColumnName="DependantSurname" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="ResignationDate" ColumnName="ResignationDate" />
+          <ScalarProperty Name="SuspendedFrom" ColumnName="SuspendedFrom" />
+          <ScalarProperty Name="SuspendedTo" ColumnName="SuspendedTo" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+          <ScalarProperty Name="WaitingPeriodEndDate" ColumnName="WaitingPeriodEndDate" />
+          <ScalarProperty Name="IdDependantType" ColumnName="IdDependantType" />
+          <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+          <ScalarProperty Name="CellularNumber" ColumnName="CellularNumber" />
+          <ScalarProperty Name="WorkNumber" ColumnName="WorkNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="IsDiabetic" ColumnName="IsDiabetic" />
+          <ScalarProperty Name="DiabeticStartDate" ColumnName="DiabeticStartDate" />
+          <ScalarProperty Name="DiabeticEndDate" ColumnName="DiabeticEndDate" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="IsSACitizen" ColumnName="IsSACitizen" />
+          <ScalarProperty Name="IsSmoking" ColumnName="IsSmoking" />
+          <ScalarProperty Name="IsStudent" ColumnName="IsStudent" />
+          <ScalarProperty Name="StudentStartDate" ColumnName="StudentStartDate" />
+          <ScalarProperty Name="StudentEndDate" ColumnName="StudentEndDate" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DependantTypes">
+      <EntityTypeMapping TypeName="UniversalModel.DependantType">
+        <MappingFragment StoreEntitySet="DependantTypes">
+          <ScalarProperty Name="IdDependantType" ColumnName="IdDependantType" />
+          <ScalarProperty Name="DependantTypeCode" ColumnName="DependantTypeCode" />
+          <ScalarProperty Name="DependantTypeDescription" ColumnName="DependantTypeDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Disciplines">
+      <EntityTypeMapping TypeName="UniversalModel.Discipline">
+        <MappingFragment StoreEntitySet="Disciplines">
+          <ScalarProperty Name="IdDiscipline" ColumnName="IdDiscipline" />
+          <ScalarProperty Name="DisciplineCode" ColumnName="DisciplineCode" />
+          <ScalarProperty Name="DisciplineDescription" ColumnName="DisciplineDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="UniversalModel.Gender">
+        <MappingFragment StoreEntitySet="Genders">
+          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+          <ScalarProperty Name="GenderCode" ColumnName="GenderCode" />
+          <ScalarProperty Name="GenderDescription" ColumnName="GenderDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hobbies">
+      <EntityTypeMapping TypeName="UniversalModel.Hobby">
+        <MappingFragment StoreEntitySet="Hobbies">
+          <ScalarProperty Name="IdHobby" ColumnName="IdHobby" />
+          <ScalarProperty Name="HobbyName" ColumnName="HobbyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstitutionContacts">
+      <EntityTypeMapping TypeName="UniversalModel.InstitutionContact">
+        <MappingFragment StoreEntitySet="InstitutionContacts">
+          <ScalarProperty Name="IdInstitutionContact" ColumnName="IdInstitutionContact" />
+          <ScalarProperty Name="IdInstitution" ColumnName="IdInstitution" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Institutions">
+      <EntityTypeMapping TypeName="UniversalModel.Institution">
+        <MappingFragment StoreEntitySet="Institutions">
+          <ScalarProperty Name="IdInstitution" ColumnName="IdInstitution" />
+          <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LifestylePlans">
+      <EntityTypeMapping TypeName="UniversalModel.LifestylePlan">
+        <MappingFragment StoreEntitySet="LifestylePlans">
+          <ScalarProperty Name="IdLifestylePlan" ColumnName="IdLifestylePlan" />
+          <ScalarProperty Name="lifesylePlanCode" ColumnName="lifesylePlanCode" />
+          <ScalarProperty Name="LifestylePlanName" ColumnName="LifestylePlanName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Limits">
+      <EntityTypeMapping TypeName="UniversalModel.Limit">
+        <MappingFragment StoreEntitySet="Limits">
+          <ScalarProperty Name="IdLimit" ColumnName="IdLimit" />
+          <ScalarProperty Name="IdMember" ColumnName="IdMember" />
+          <ScalarProperty Name="IdDependant" ColumnName="IdDependant" />
+          <ScalarProperty Name="LimitYear" ColumnName="LimitYear" />
+          <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
+          <ScalarProperty Name="LimitDescription" ColumnName="LimitDescription" />
+          <ScalarProperty Name="LimitCeiling" ColumnName="LimitCeiling" />
+          <ScalarProperty Name="LimitBenefit" ColumnName="LimitBenefit" />
+          <ScalarProperty Name="LimitExgratia" ColumnName="LimitExgratia" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="UniversalModel.Login">
+        <MappingFragment StoreEntitySet="Logins">
+          <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaritalStatusses">
+      <EntityTypeMapping TypeName="UniversalModel.MaritalStatuss">
+        <MappingFragment StoreEntitySet="MaritalStatusses">
+          <ScalarProperty Name="IdMaritalStatus" ColumnName="IdMaritalStatus" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberAddresses">
+      <EntityTypeMapping TypeName="UniversalModel.MemberAddress">
+        <MappingFragment StoreEntitySet="MemberAddresses">
+          <ScalarProperty Name="IdAddress" ColumnName="IdAddress" />
+          <ScalarProperty Name="IdMember" ColumnName="IdMember" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address4" ColumnName="Address4" />
+          <ScalarProperty Name="IdProvince" ColumnName="IdProvince" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="IsPostalAddress" ColumnName="IsPostalAddress" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateAmended" ColumnName="DateAmended" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="UniversalModel.Member">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="IdMember" ColumnName="IdMember" />
+          <ScalarProperty Name="MAMembershipNumber" ColumnName="MAMembershipNumber" />
+          <ScalarProperty Name="LifestyleMembershipNumber" ColumnName="LifestyleMembershipNumber" />
+          <ScalarProperty Name="NumberOfDependants" ColumnName="NumberOfDependants" />
+          <ScalarProperty Name="IdLifestylePlan" ColumnName="IdLifestylePlan" />
+          <ScalarProperty Name="IdSchemeOption" ColumnName="IdSchemeOption" />
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NonMembers">
+      <EntityTypeMapping TypeName="UniversalModel.NonMember">
+        <MappingFragment StoreEntitySet="NonMembers">
+          <ScalarProperty Name="IdNonMember" ColumnName="IdNonMember" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IdPassport" ColumnName="IdPassport" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenClaims">
+      <EntityTypeMapping TypeName="UniversalModel.OpenClaim">
+        <MappingFragment StoreEntitySet="OpenClaims">
+          <ScalarProperty Name="IdClaim" ColumnName="IdClaim" />
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+          <ScalarProperty Name="IdDependant" ColumnName="IdDependant" />
+          <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="ServiceDate" ColumnName="ServiceDate" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="ClaimAmount" ColumnName="ClaimAmount" />
+          <ScalarProperty Name="TariffAmount" ColumnName="TariffAmount" />
+          <ScalarProperty Name="PaidToSupplierAmount" ColumnName="PaidToSupplierAmount" />
+          <ScalarProperty Name="PaidToMemberAmount" ColumnName="PaidToMemberAmount" />
+          <ScalarProperty Name="RejectedAmount" ColumnName="RejectedAmount" />
+          <ScalarProperty Name="SurchargeAmount" ColumnName="SurchargeAmount" />
+          <ScalarProperty Name="ExessAmount" ColumnName="ExessAmount" />
+          <ScalarProperty Name="IdPaymentMethod" ColumnName="IdPaymentMethod" />
+          <ScalarProperty Name="IdRemarks" ColumnName="IdRemarks" />
+          <ScalarProperty Name="DateClaimPaid" ColumnName="DateClaimPaid" />
+          <ScalarProperty Name="ClaimItemLineNumber" ColumnName="ClaimItemLineNumber" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateAmended" ColumnName="DateAmended" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Partners">
+      <EntityTypeMapping TypeName="UniversalModel.Partner">
+        <MappingFragment StoreEntitySet="Partners">
+          <ScalarProperty Name="IdPartner" ColumnName="IdPartner" />
+          <ScalarProperty Name="PartnerNumber" ColumnName="PartnerNumber" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentMethods">
+      <EntityTypeMapping TypeName="UniversalModel.PaymentMethod">
+        <MappingFragment StoreEntitySet="PaymentMethods">
+          <ScalarProperty Name="IdPaymentMethod" ColumnName="IdPaymentMethod" />
+          <ScalarProperty Name="PaymentMethodCode" ColumnName="PaymentMethodCode" />
+          <ScalarProperty Name="PaymentMethodDescription" ColumnName="PaymentMethodDescription" />
+          <ScalarProperty Name="PaymentMadeTo" ColumnName="PaymentMadeTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PharmacyGroups">
+      <EntityTypeMapping TypeName="UniversalModel.PharmacyGroup">
+        <MappingFragment StoreEntitySet="PharmacyGroups">
+          <ScalarProperty Name="IdPharmacyGroup" ColumnName="IdPharmacyGroup" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="UniversalModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provinces">
+      <EntityTypeMapping TypeName="UniversalModel.Province">
+        <MappingFragment StoreEntitySet="Provinces">
+          <ScalarProperty Name="IdProvince" ColumnName="IdProvince" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Purchases">
+      <EntityTypeMapping TypeName="UniversalModel.Purchase">
+        <MappingFragment StoreEntitySet="Purchases">
+          <ScalarProperty Name="IdPurchase" ColumnName="IdPurchase" />
+          <ScalarProperty Name="IdStudent" ColumnName="IdStudent" />
+          <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+          <ScalarProperty Name="IdStore" ColumnName="IdStore" />
+          <ScalarProperty Name="TransactionAmount" ColumnName="TransactionAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Remarks">
+      <EntityTypeMapping TypeName="UniversalModel.Remark">
+        <MappingFragment StoreEntitySet="Remarks">
+          <ScalarProperty Name="IdRemark" ColumnName="IdRemark" />
+          <ScalarProperty Name="RemarkCode" ColumnName="RemarkCode" />
+          <ScalarProperty Name="RemarkDescription" ColumnName="RemarkDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchemeOptions">
+      <EntityTypeMapping TypeName="UniversalModel.SchemeOption">
+        <MappingFragment StoreEntitySet="SchemeOptions">
+          <ScalarProperty Name="IdSchemeOption" ColumnName="IdSchemeOption" />
+          <ScalarProperty Name="IdScheme" ColumnName="IdScheme" />
+          <ScalarProperty Name="SchemeOptionCode" ColumnName="SchemeOptionCode" />
+          <ScalarProperty Name="SchemeOptionIndicator" ColumnName="SchemeOptionIndicator" />
+          <ScalarProperty Name="SchemeOptionDescription" ColumnName="SchemeOptionDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schemes">
+      <EntityTypeMapping TypeName="UniversalModel.Scheme">
+        <MappingFragment StoreEntitySet="Schemes">
+          <ScalarProperty Name="IdScheme" ColumnName="IdScheme" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="SchemeFullName" ColumnName="SchemeFullName" />
+          <ScalarProperty Name="SchemeURL" ColumnName="SchemeURL" />
+          <ScalarProperty Name="SchemeTelephone" ColumnName="SchemeTelephone" />
+          <ScalarProperty Name="SchemeFax" ColumnName="SchemeFax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sports">
+      <EntityTypeMapping TypeName="UniversalModel.Sport">
+        <MappingFragment StoreEntitySet="Sports">
+          <ScalarProperty Name="IdSport" ColumnName="IdSport" />
+          <ScalarProperty Name="SportName" ColumnName="SportName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatementRequests">
+      <EntityTypeMapping TypeName="UniversalModel.StatementRequest">
+        <MappingFragment StoreEntitySet="StatementRequests">
+          <ScalarProperty Name="IdStatementRequested" ColumnName="IdStatementRequested" />
+          <ScalarProperty Name="IdStatementType" ColumnName="IdStatementType" />
+          <ScalarProperty Name="IdMember" ColumnName="IdMember" />
+          <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatementTypes">
+      <EntityTypeMapping TypeName="UniversalModel.StatementType">
+        <MappingFragment StoreEntitySet="StatementTypes">
+          <ScalarProperty Name="IdStatementType" ColumnName="IdStatementType" />
+          <ScalarProperty Name="StatementName" ColumnName="StatementName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stores">
+      <EntityTypeMapping TypeName="UniversalModel.Store">
+        <MappingFragment StoreEntitySet="Stores">
+          <ScalarProperty Name="IdStore" ColumnName="IdStore" />
+          <ScalarProperty Name="VCSTerminalId" ColumnName="VCSTerminalId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentAddresses">
+      <EntityTypeMapping TypeName="UniversalModel.StudentAddress">
+        <MappingFragment StoreEntitySet="StudentAddresses">
+          <ScalarProperty Name="IdStudentAddress" ColumnName="IdStudentAddress" />
+          <ScalarProperty Name="IdStudent" ColumnName="IdStudent" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address4" ColumnName="Address4" />
+          <ScalarProperty Name="IdProvince" ColumnName="IdProvince" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="IsPostalAddress" ColumnName="IsPostalAddress" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateAmended" ColumnName="DateAmended" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentDependants">
+      <EntityTypeMapping TypeName="UniversalModel.StudentDependant">
+        <MappingFragment StoreEntitySet="StudentDependants">
+          <ScalarProperty Name="IdStudentDependant" ColumnName="IdStudentDependant" />
+          <ScalarProperty Name="IdStudent" ColumnName="IdStudent" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="IdDependantType" ColumnName="IdDependantType" />
+          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="UniversalModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="IdStudent" ColumnName="IdStudent" />
+          <ScalarProperty Name="CommencementDate" ColumnName="CommencementDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="FirstNames" ColumnName="FirstNames" />
+          <ScalarProperty Name="IdTitle" ColumnName="IdTitle" />
+          <ScalarProperty Name="IdMaritalStatus" ColumnName="IdMaritalStatus" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="IDPassport" ColumnName="IDPassport" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BusinessTelephone" ColumnName="BusinessTelephone" />
+          <ScalarProperty Name="HomeTelephone" ColumnName="HomeTelephone" />
+          <ScalarProperty Name="Facsimile" ColumnName="Facsimile" />
+          <ScalarProperty Name="Cellular" ColumnName="Cellular" />
+          <ScalarProperty Name="StudyInstitution" ColumnName="StudyInstitution" />
+          <ScalarProperty Name="StudentNumber" ColumnName="StudentNumber" />
+          <ScalarProperty Name="CountryOfIssue" ColumnName="CountryOfIssue" />
+          <ScalarProperty Name="Embassy" ColumnName="Embassy" />
+          <ScalarProperty Name="MedicalQ1" ColumnName="MedicalQ1" />
+          <ScalarProperty Name="MedicalQ2" ColumnName="MedicalQ2" />
+          <ScalarProperty Name="MedicalQ3" ColumnName="MedicalQ3" />
+          <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="AccountHolderName" ColumnName="AccountHolderName" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="IdAccountType" ColumnName="IdAccountType" />
+          <ScalarProperty Name="MembershipNumber" ColumnName="MembershipNumber" />
+          <ScalarProperty Name="StudyDuration" ColumnName="StudyDuration" />
+          <ScalarProperty Name="Contribution" ColumnName="Contribution" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="TransactionSuccess" ColumnName="TransactionSuccess" />
+          <ScalarProperty Name="PreferredSupplier" ColumnName="PreferredSupplier" />
+          <ScalarProperty Name="IsExistingMember" ColumnName="IsExistingMember" />
+          <ScalarProperty Name="NewMemberOrder" ColumnName="NewMemberOrder" />
+          <ScalarProperty Name="AppointedABSA" ColumnName="AppointedABSA" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="IsGettingIncome" ColumnName="IsGettingIncome" />
+          <ScalarProperty Name="IncomeAmount" ColumnName="IncomeAmount" />
+          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubConsultants">
+      <EntityTypeMapping TypeName="UniversalModel.SubConsultant">
+        <MappingFragment StoreEntitySet="SubConsultants">
+          <ScalarProperty Name="IdSubConsultant" ColumnName="IdSubConsultant" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierAddresses">
+      <EntityTypeMapping TypeName="UniversalModel.SupplierAddress">
+        <MappingFragment StoreEntitySet="SupplierAddresses">
+          <ScalarProperty Name="IdSupplierAddress" ColumnName="IdSupplierAddress" />
+          <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address4" ColumnName="Address4" />
+          <ScalarProperty Name="IdProvince" ColumnName="IdProvince" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="IsPostalAddress" ColumnName="IsPostalAddress" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateAmended" ColumnName="DateAmended" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="UniversalModel.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+          <ScalarProperty Name="IdDiscipline" ColumnName="IdDiscipline" />
+          <ScalarProperty Name="IdSubDiscipline" ColumnName="IdSubDiscipline" />
+          <ScalarProperty Name="SupplierBHFNumber" ColumnName="SupplierBHFNumber" />
+          <ScalarProperty Name="PCNSNumber" ColumnName="PCNSNumber" />
+          <ScalarProperty Name="SupplierTitle" ColumnName="SupplierTitle" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierPostalAddress1" ColumnName="SupplierPostalAddress1" />
+          <ScalarProperty Name="SupplierPostalAddress2" ColumnName="SupplierPostalAddress2" />
+          <ScalarProperty Name="SupplierPostalAddress3" ColumnName="SupplierPostalAddress3" />
+          <ScalarProperty Name="SupplierPostalAddress4" ColumnName="SupplierPostalAddress4" />
+          <ScalarProperty Name="SupplierPostalCode" ColumnName="SupplierPostalCode" />
+          <ScalarProperty Name="SupplierTelephone" ColumnName="SupplierTelephone" />
+          <ScalarProperty Name="IsNetworkSupplier" ColumnName="IsNetworkSupplier" />
+          <ScalarProperty Name="SupplierEmailAddress" ColumnName="SupplierEmailAddress" />
+          <ScalarProperty Name="SupplierPhysicalAddress1" ColumnName="SupplierPhysicalAddress1" />
+          <ScalarProperty Name="SupplierPhysicalAddress2" ColumnName="SupplierPhysicalAddress2" />
+          <ScalarProperty Name="SupplierPhysicalAddress3" ColumnName="SupplierPhysicalAddress3" />
+          <ScalarProperty Name="SupplierPhysicalAddress4" ColumnName="SupplierPhysicalAddress4" />
+          <ScalarProperty Name="SupplierPhysicalProvince" ColumnName="SupplierPhysicalProvince" />
+          <ScalarProperty Name="SupplierPhysicalPostalCode" ColumnName="SupplierPhysicalPostalCode" />
+          <ScalarProperty Name="SupplierFaxNumber" ColumnName="SupplierFaxNumber" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="IdPharmacyGroup" ColumnName="IdPharmacyGroup" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Titles">
+      <EntityTypeMapping TypeName="UniversalModel.Title">
+        <MappingFragment StoreEntitySet="Titles">
+          <ScalarProperty Name="IdTitle" ColumnName="IdTitle" />
+          <ScalarProperty Name="TitleAbbreviation" ColumnName="TitleAbbreviation" />
+          <ScalarProperty Name="TitleDescription" ColumnName="TitleDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreatmentDetails">
+      <EntityTypeMapping TypeName="UniversalModel.TreatmentDetail">
+        <MappingFragment StoreEntitySet="TreatmentDetail">
+          <ScalarProperty Name="IdTreatmentDetail" ColumnName="IdTreatmentDetail" />
+          <ScalarProperty Name="IdStudent" ColumnName="IdStudent" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DetailsOfCondition" ColumnName="DetailsOfCondition" />
+          <ScalarProperty Name="TreatmentDate" ColumnName="TreatmentDate" />
+          <ScalarProperty Name="DegreeOfRecovery" ColumnName="DegreeOfRecovery" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="UniversalModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="IdMember" ColumnName="IdMember" />
+          <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+          <ScalarProperty Name="IdPartner" ColumnName="IdPartner" />
+          <ScalarProperty Name="IdBroker" ColumnName="IdBroker" />
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="IdStudent" ColumnName="IdStudent" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="IsSupplier" ColumnName="IsSupplier" />
+          <ScalarProperty Name="IsNHBRCFLI" ColumnName="IsNHBRCFLI" />
+          <ScalarProperty Name="IsLifestyle" ColumnName="IsLifestyle" />
+          <ScalarProperty Name="IsCompCare" ColumnName="IsCompCare" />
+          <ScalarProperty Name="IsTiger" ColumnName="IsTiger" />
+          <ScalarProperty Name="IsGrintek" ColumnName="IsGrintek" />
+          <ScalarProperty Name="IsWorkerPlan" ColumnName="IsWorkerPlan" />
+          <ScalarProperty Name="IsBCIMA" ColumnName="IsBCIMA" />
+          <ScalarProperty Name="IsPartner" ColumnName="IsPartner" />
+          <ScalarProperty Name="IsBroker" ColumnName="IsBroker" />
+          <ScalarProperty Name="IsCompany" ColumnName="IsCompany" />
+          <ScalarProperty Name="IsStudent" ColumnName="IsStudent" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebsiteLeads">
+      <EntityTypeMapping TypeName="UniversalModel.WebsiteLead">
+        <MappingFragment StoreEntitySet="WebsiteLeads">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="IdSchemeOption" ColumnName="IdSchemeOption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

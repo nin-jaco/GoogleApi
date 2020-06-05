@@ -1,0 +1,6 @@
+C:\Users\jaco.kleynhans\Documents\Visual Studio 2010\Projects\Geocode\Geocode\Geocode\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jaco.kleynhans\Documents\Visual Studio 2010\Projects\Geocode\Geocode\Geocode\bin\Debug\Geocode.exe.config
+C:\Users\jaco.kleynhans\Documents\Visual Studio 2010\Projects\Geocode\Geocode\Geocode\bin\Debug\Geocode.exe
+C:\Users\jaco.kleynhans\Documents\Visual Studio 2010\Projects\Geocode\Geocode\Geocode\bin\Debug\Geocode.pdb
+C:\Users\jaco.kleynhans\Documents\Visual Studio 2010\Projects\Geocode\Geocode\Geocode\obj\x86\Debug\Geocode.exe
+C:\Users\jaco.kleynhans\Documents\Visual Studio 2010\Projects\Geocode\Geocode\Geocode\obj\x86\Debug\Geocode.pdb
